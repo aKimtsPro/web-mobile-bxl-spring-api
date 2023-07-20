@@ -1,6 +1,8 @@
-package be.bxlforma.api.service;
+package be.bxlforma.api.service.impl;
 
 import be.bxlforma.api.models.entity.Task;
+import be.bxlforma.api.models.entity.Urgency;
+import be.bxlforma.api.service.TaskService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -43,5 +45,25 @@ public class TaskServiceImpl implements TaskService {
     public void add(Task toAdd) {
         toAdd.setId( nextId++ );
         tasks.add(toAdd);
+    }
+
+    @Override
+    public void update(long id, Task task) {
+        Task toUpdate = getOne(id);
+        toUpdate.setDescription( task.getDescription() );
+        toUpdate.setUrgency( task.getUrgency() );
+        toUpdate.setDeadline( task.getDeadline() );
+    }
+
+    @Override
+    public void upUrgency(long id) {
+        Task toUpdate = getOne(id);
+        toUpdate.setUrgency( toUpdate.getUrgency().up() );
+    }
+
+    @Override
+    public void downUrgency(long id) {
+        Task toUpdate = getOne(id);
+        toUpdate.setUrgency( toUpdate.getUrgency().down() );
     }
 }

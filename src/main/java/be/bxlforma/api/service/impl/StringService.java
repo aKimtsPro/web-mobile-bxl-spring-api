@@ -1,4 +1,4 @@
-package be.bxlforma.api.service;
+package be.bxlforma.api.service.impl;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

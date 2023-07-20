@@ -1,6 +1,7 @@
-package be.bxlforma.api.service;
+package be.bxlforma.api.service.impl;
 
 import be.bxlforma.api.models.entity.Voiture;
+import be.bxlforma.api.service.VoitureService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

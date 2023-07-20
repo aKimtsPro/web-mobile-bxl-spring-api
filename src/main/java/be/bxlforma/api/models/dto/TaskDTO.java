@@ -7,7 +7,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class AddTaskDTO {
+public class TaskDTO {
     private String description;
     private Urgency urgency;
     private LocalDate deadline;

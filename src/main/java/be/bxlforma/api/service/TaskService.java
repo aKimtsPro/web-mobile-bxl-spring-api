@@ -11,5 +11,8 @@ public interface TaskService {
     Task getOne(long id);
     List<Task> getBefore(LocalDate maxDeadline);
     void add(Task toAdd);
+    void update(long id, Task task);
+    void upUrgency(long id);
+    void downUrgency(long id);
 
 }

@@ -1,7 +1,7 @@
 package be.bxlforma.api.controller;
 
 import be.bxlforma.api.models.dto.AddInfoDTO;
-import be.bxlforma.api.service.StringService;
+import be.bxlforma.api.service.impl.StringService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
