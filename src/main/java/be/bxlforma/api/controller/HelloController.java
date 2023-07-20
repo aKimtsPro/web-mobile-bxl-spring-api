@@ -1,6 +1,7 @@
-package be.bxlforma.api;
+package be.bxlforma.api.controller;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import be.bxlforma.api.models.dto.AddInfoDTO;
+import be.bxlforma.api.service.StringService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

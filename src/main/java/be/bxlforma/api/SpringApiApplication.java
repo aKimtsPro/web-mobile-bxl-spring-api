@@ -1,6 +1,6 @@
 package be.bxlforma.api;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import be.bxlforma.api.service.StringService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

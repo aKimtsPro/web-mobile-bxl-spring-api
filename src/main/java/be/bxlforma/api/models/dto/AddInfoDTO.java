@@ -1,4 +1,4 @@
-package be.bxlforma.api;
+package be.bxlforma.api.models.dto;
 
 import lombok.Getter;
 import lombok.Setter;
