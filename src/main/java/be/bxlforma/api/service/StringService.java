@@ -24,4 +24,8 @@ public class StringService {
         strings.add(index, element);
     }
 
+    public void delete(int index) {
+        strings.remove(index);
+    }
+
 }

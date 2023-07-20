@@ -34,4 +34,11 @@ public class HelloController {
     public void add( @RequestBody AddInfoDTO dto){
         service.add(dto.getIndex(), dto.getMessage());
     }
+
+    @DeleteMapping("/strings/{index}")
+    public void delete(@PathVariable int index){
+        service.delete(index);
+    }
+
+
 }

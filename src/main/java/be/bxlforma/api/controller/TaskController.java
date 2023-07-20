@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
+@RequestMapping("/task") // préfixe l'URI à utiliser pour les endpoints du controller
 public class TaskController {
 
     private final TaskService taskService;
@@ -18,22 +19,28 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @GetMapping("/task/all")
+
+    // GET - http://localhost:8080/task/all
+//    @RequestMapping(method = RequestMethod.GET, path = "/all")
+    @GetMapping("/all")
     public List<Task> getAll(){
         return taskService.getAll();
     }
 
-    @GetMapping("/task/{id}")
+    // GET - http://localhost:8080/task/{id}
+    @GetMapping("/{id}")
     public Task getOne(@PathVariable/*("id")*/ long id){
         return taskService.getOne(id);
     }
 
-    @PostMapping("/task")
+    // POST - http://localhost:8080/task
+    @PostMapping
     public void create(@RequestBody AddTaskDTO dto){
         taskService.add( dto.toEntity() );
     }
 
-    @GetMapping("/task")
+    // GET - http://localhost:8080/task
+    @GetMapping
     public List<Task> getBefore(@RequestParam LocalDate maxDeadline){
         return taskService.getBefore(maxDeadline);
     }
